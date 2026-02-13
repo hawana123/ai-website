@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI模型 - AI前沿</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-brain"></i>
+                <span>AI前沿</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="news.html"><i class="fas fa-newspaper"></i> AI资讯</a></li>
+                <li><a href="models.html" class="active"><i class="fas fa-robot"></i> AI模型</a></li>
+                <li><a href="tutorials.html"><i class="fas fa-graduation-cap"></i> AI教程</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> 关于</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>主流AI模型</h1>
+            <p class="page-subtitle">深入了解各大AI模型的特点、能力和应用场景</p>
+
+            <!-- 模型分类 -->
+            <div class="model-categories">
+                <button class="category-btn active" data-category="all">全部模型</button>
+                <button class="category-btn" data-category="llm">大语言模型</button>
+                <button class="category-btn" data-category="multimodal">多模态模型</button>
+                <button class="category-btn" data-category="code">代码模型</button>
+                <button class="category-btn" data-category="image">图像模型</button>
+            </div>
+
+            <!-- 国家/地区筛选 -->
+            <div class="country-filter">
+                <button class="country-filter-btn active" data-country="all">
+                    <span class="country-flag">🌍</span> 全部国家
+                </button>
+                <button class="country-filter-btn" data-country="us">
+                    <span class="country-flag us">🇺🇸</span> 美国
+                </button>
+                <button class="country-filter-btn" data-country="cn">
+                    <span class="country-flag cn">🇨🇳</span> 中国
+                </button>
+                <button class="country-filter-btn" data-country="other">
+                    <span class="country-flag">🌐</span> 其他地区
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 模型对比表格 -->
+    <section class="model-comparison">
+        <div class="container">
+            <h2 class="section-title">模型对比</h2>
+            <div class="comparison-table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>模型名称</th>
+                            <th>国家/地区</th>
+                            <th>开发公司</th>
+                            <th>类型</th>
+                            <th>参数量</th>
+                            <th>上下文长度</th>
+                            <th>主要特点</th>
+                            <th>应用场景</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-category="llm">
+                            <td><strong>GPT-4</strong></td>
+                            <td><span class="country-flag us" title="美国">🇺🇸</span> 美国</td>
+                            <td>OpenAI</td>
+                            <td>大语言模型</td>
+                            <td>约1.8万亿</td>
+                            <td>128K tokens</td>
+                            <td>强大的推理能力、多模态支持</td>
+                            <td>对话、写作、编程、分析</td>
+                        </tr>
+                        <tr data-category="llm">
+                            <td><strong>Claude 3</strong></td>
+                            <td><span class="country-flag us" title="美国">🇺🇸</span> 美国</td>
+                            <td>Anthropic</td>
+                            <td>大语言模型</td>
+                            <td>未公开</td>
+                            <td>200K tokens</td>
+                            <td>安全性高、长上下文处理</td>
+                            <td>文档分析、安全对话、研究</td>
+                        </tr>
+                        <tr data-category="multimodal">
+                            <td><strong>Gemini Ultra</strong></td>
+                            <td><span class="country-flag us" title="美国">🇺🇸</span> 美国</td>
+                            <td>Google</td>
+                            <td>多模态模型</td>
+                            <td>未公开</td>
+                            <td>1M tokens</td>
+                            <td>原生多模态、强大推理</td>
+                            <td>多模态分析、复杂任务</td>
+                        </tr>
+                        <tr data-category="code">
+                            <td><strong>GitHub Copilot</strong></td>
+                            <td><span class="country-flag us" title="美国">🇺🇸</span> 美国</td>
+                            <td>GitHub/Microsoft</td>
+                            <td>代码模型</td>
+                            <td>未公开</td>
+                            <td>8K tokens</td>
+                            <td>代码补全、代码生成</td>
+                            <td>编程、代码审查、调试</td>
+                        </tr>
+                        <tr data-category="image">
+                            <td><strong>DALL-E 3</strong></td>
+                            <td><span class="country-flag us" title="美国">🇺🇸</span> 美国</td>
+                            <td>OpenAI</td>
+                            <td>图像生成</td>
+                            <td>未公开</td>
+                            <td>N/A</td>
+                            <td>高质量图像生成、文本理解</td>
+                            <td>创意设计、内容创作</td>
+                        </tr>
+                        <tr data-category="llm">
+                            <td><strong>Llama 3</strong></td>
+                            <td><span class="country-flag us" title="美国">🇺🇸</span> 美国</td>
+                            <td>Meta</td>
+                            <td>大语言模型</td>
+                            <td>700亿</td>
+                            <td>8K tokens</td>
+                            <td>开源、可商用</td>
+                            <td>研究、商业应用、定制</td>
+                        </tr>
+                        <tr data-category="multimodal">
+                            <td><strong>GPT-4V</strong></td>
+                            <td><span class="country-flag us" title="美国">🇺🇸</span> 美国</td>
+                            <td>OpenAI</td>
+                            <td>多模态模型</td>
+                            <td>未公开</td>
+                            <td>128K tokens</td>
+                            <td>视觉理解、图像分析</td>
+                            <td>图像分析、文档处理</td>
+                        </tr>
+
+                        <!-- 国内AI模型 -->
+                        <tr data-category="llm" data-country="cn">
+                            <td><strong>文心一言 4.0</strong></td>
+                            <td><span class="country-flag cn" title="中国">🇨🇳</span> 中国</td>
+                            <td>百度</td>
+                            <td>大语言模型</td>
+                            <td>未公开</td>
+                            <td>128K tokens</td>
+                            <td>中文理解优秀、多模态能力</td>
+                            <td>中文对话、内容创作、办公助手</td>
+                        </tr>
+
+                        <tr data-category="llm" data-country="cn">
+                            <td><strong>通义千问 2.5</strong></td>
+                            <td><span class="country-flag cn" title="中国">🇨🇳</span> 中国</td>
+                            <td>阿里巴巴</td>
+                            <td>大语言模型</td>
+                            <td>未公开</td>
+                            <td>128K tokens</td>
+                            <td>代码能力强、多轮对话</td>
+                            <td>编程助手、电商应用、企业服务</td>
+                        </tr>
+
+                        <tr data-category="multimodal" data-country="cn">
+                            <td><strong>腾讯混元</strong></td>
+                            <td><span class="country-flag cn" title="中国">🇨🇳</span> 中国</td>
+                            <td>腾讯</td>
+                            <td>多模态模型</td>
+                            <td>未公开</td>
+                            <td>32K tokens</td>
+                            <td>游戏AI、社交应用集成</td>
+                            <td>游戏NPC、社交助手、内容生成</td>
+                        </tr>
+
+                        <tr data-category="llm" data-country="cn">
+                            <td><strong>智谱GLM-4</strong></td>
+                            <td><span class="country-flag cn" title="中国">🇨🇳</span> 中国</td>
+                            <td>智谱AI</td>
+                            <td>大语言模型</td>
+                            <td>未公开</td>
+                            <td>128K tokens</td>
+                            <td>中英双语优秀、开源版本</td>
+                            <td>学术研究、企业定制、双语应用</td>
+                        </tr>
+
+                        <tr data-category="image" data-country="cn">
+                            <td><strong>昆仑万维天工</strong></td>
+                            <td><span class="country-flag cn" title="中国">🇨🇳</span> 中国</td>
+                            <td>昆仑万维</td>
+                            <td>多模态模型</td>
+                            <td>未公开</td>
+                            <td>32K tokens</td>
+                            <td>图像生成、3D内容创作</td>
+                            <td>创意设计、游戏开发、3D建模</td>
+                        </tr>
+
+                        <tr data-category="llm" data-country="cn">
+                            <td><strong>月之暗面Kimi</strong></td>
+                            <td><span class="country-flag cn" title="中国">🇨🇳</span> 中国</td>
+                            <td>月之暗面</td>
+                            <td>大语言模型</td>
+                            <td>未公开</td>
+                            <td>200K tokens</td>
+                            <td>超长上下文、文档处理</td>
+                            <td>长文档分析、研究助手、知识管理</td>
+                        </tr>
+
+                        <tr data-category="llm" data-country="cn">
+                            <td><strong>零一万物Yi</strong></td>
+                            <td><span class="country-flag cn" title="中国">🇨🇳</span> 中国</td>
+                            <td>零一万物</td>
+                            <td>大语言模型</td>
+                            <td>340亿</td>
+                            <td>16K tokens</td>
+                            <td>开源可商用、多语言支持</td>
+                            <td>企业部署、多语言应用、研究</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 模型详细介绍 -->
+    <section class="model-details">
+        <div class="container">
+            <h2 class="section-title">模型详细介绍</h2>
+            <div class="models-grid detailed">
+                <!-- GPT-4 模型卡片 -->
+                <div class="model-card detailed" data-category="llm" data-country="us">
+                    <div class="model-header">
+                        <div class="model-logo gpt">
+                            <i class="fab fa-openai"></i>
+                        </div>
+                        <div class="model-info">
+                            <h3 class="model-name">GPT-4</h3>
+                            <div class="model-company">OpenAI</div>
+                        </div>
+                    </div>
+
+                    <div class="model-description">
+                        <p>GPT-4是OpenAI开发的多模态大语言模型，具有强大的推理能力和创造性。它能够处理文本和图像输入，生成文本输出，在专业和学术基准测试中表现出色。</p>
+                    </div>
+
+                    <div class="model-specs">
+                        <div class="spec">
+                            <span class="spec-label">参数量</span>
+                            <span class="spec-value">约1.8万亿</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">上下文长度</span>
+                            <span class="spec-value">128K tokens</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">训练数据</span>
+                            <span class="spec-value">截至2023年4月</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">多模态支持</span>
+                            <span class="spec-value">是</span>
+                        </div>
+                    </div>
+
+                    <div class="model-features">
+                        <h4>主要特点</h4>
+                        <ul>
+                            <li>强大的逻辑推理能力</li>
+                            <li>支持图像和文本输入</li>
+                            <li>在专业考试中表现优异</li>
+                            <li>代码生成和调试能力</li>
+                            <li>创造性写作和内容生成</li>
+                        </ul>
+                    </div>
+
+                    <div class="model-tags">
+                        <span class="tag">文本生成</span>
+                        <span class="tag">代码编写</span>
+                        <span class="tag">多模态</span>
+                        <span class="tag">推理能力</span>
+                    </div>
+
+                    <div class="model-links">
+                        <a href="https://openai.com/gpt-4" target="_blank" class="model-link">
+                            <i class="fas fa-external-link-alt"></i> 官方网站
+                        </a>
+                        <a href="#" class="model-link">
+                            <i class="fas fa-book"></i> 技术文档
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Claude 3 模型卡片 -->
+                <div class="model-card detailed" data-category="llm" data-country="us">
+                    <div class="model-header">
+                        <div class="model-logo claude">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="model-info">
+                            <h3 class="model-name">Claude 3</h3>
+                            <div class="model-company">Anthropic</div>
+                        </div>
+                    </div>
+
+                    <div class="model-description">
+                        <p>Claude 3是Anthropic开发的AI助手系列，包括Haiku、Sonnet和Opus三个版本。该系列模型以安全性、可靠性和长上下文处理能力著称，特别适合企业级应用。</p>
+                    </div>
+
+                    <div class="model-specs">
+                        <div class="spec">
+                            <span class="spec-label">版本</span>
+                            <span class="spec-value">Haiku/Sonnet/Opus</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">上下文长度</span>
+                            <span class="spec-value">200K tokens</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">训练方法</span>
+                            <span class="spec-value">宪法AI</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">多模态支持</span>
+                            <span class="spec-value">是</span>
+                        </div>
+                    </div>
+
+                    <div class="model-features">
+                        <h4>主要特点</h4>
+                        <ul>
+                            <li>强大的安全性和可靠性</li>
+                            <li>超长上下文处理能力</li>
+                            <li>宪法AI训练方法</li>
+                            <li>优秀的文档分析能力</li>
+                            <li>企业级安全标准</li>
+                        </ul>
+                    </div>
+
+                    <div class="model-tags">
+                        <span class="tag">安全优先</span>
+                        <span class="tag">长上下文</span>
+                        <span class="tag">文档分析</span>
+                        <span class="tag">企业级</span>
+                    </div>
+
+                    <div class="model-links">
+                        <a href="https://www.anthropic.com/claude" target="_blank" class="model-link">
+                            <i class="fas fa-external-link-alt"></i> 官方网站
+                        </a>
+                        <a href="#" class="model-link">
+                            <i class="fas fa-book"></i> 技术文档
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gemini 模型卡片 -->
+                <div class="model-card detailed" data-category="multimodal" data-country="us">
+                    <div class="model-header">
+                        <div class="model-logo gemini">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="model-info">
+                            <h3 class="model-name">Gemini</h3>
+                            <div class="model-company">Google</div>
+                        </div>
+                    </div>
+
+                    <div class="model-description">
+                        <p>Gemini是Google开发的原生多模态AI模型系列，从Nano到Ultra多个版本。该模型从设计之初就是多模态的，能够无缝处理文本、代码、音频、图像和视频。</p>
+                    </div>
+
+                    <div class="model-specs">
+                        <div class="spec">
+                            <span class="spec-label">版本</span>
+                            <span class="spec-value">Nano/Pro/Ultra</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">上下文长度</span>
+                            <span class="spec-value">1M tokens</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">训练数据</span>
+                            <span class="spec-value">多模态数据集</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">原生多模态</span>
+                            <span class="spec-value">是</span>
+                        </div>
+                    </div>
+
+                    <div class="model-features">
+                        <h4>主要特点</h4>
+                        <ul>
+                            <li>原生多模态架构</li>
+                            <li>超长上下文支持</li>
+                            <li>强大的推理能力</li>
+                            <li>与Google生态深度集成</li>
+                            <li>多尺寸版本选择</li>
+                        </ul>
+                    </div>
+
+                    <div class="model-tags">
+                        <span class="tag">多模态</span>
+                        <span class="tag">推理能力</span>
+                        <span class="tag">Google生态</span>
+                        <span class="tag">长上下文</span>
+                    </div>
+
+                    <div class="model-links">
+                        <a href="https://deepmind.google/technologies/gemini/" target="_blank" class="model-link">
+                            <i class="fas fa-external-link-alt"></i> 官方网站
+                        </a>
+                        <a href="#" class="model-link">
+                            <i class="fas fa-book"></i> 技术文档
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Llama 3 模型卡片 -->
+                <div class="model-card detailed" data-category="llm" data-country="us">
+                    <div class="model-header">
+                        <div class="model-logo llama">
+                            <i class="fab fa-meta"></i>
+                        </div>
+                        <div class="model-info">
+                            <h3 class="model-name">Llama 3</h3>
+                            <div class="model-company">Meta</div>
+                        </div>
+                    </div>
+
+                    <div class="model-description">
+                        <p>Llama 3是Meta开发的开源大语言模型系列，提供从80亿到700亿参数的不同版本。该模型完全开源，允许商业使用，是研究和商业应用的热门选择。</p>
+                    </div>
+
+                    <div class="model-specs">
+                        <div class="spec">
+                            <span class="spec-label">参数量</span>
+                            <span class="spec-value">8B/70B/700B</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">上下文长度</span>
+                            <span class="spec-value">8K tokens</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">许可证</span>
+                            <span class="spec-value">开源商用</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">训练数据</span>
+                            <span class="spec-value">15万亿tokens</span>
+                        </div>
+                    </div>
+
+                    <div class="model-features">
+                        <h4>主要特点</h4>
+                        <ul>
+                            <li>完全开源和可商用</li>
+                            <li>多个参数规模版本</li>
+                            <li>优秀的性能表现</li>
+                            <li>活跃的社区支持</li>
+                            <li>易于定制和微调</li>
+                        </ul>
+                    </div>
+
+                    <div class="model-tags">
+                        <span class="tag">开源</span>
+                        <span class="tag">可商用</span>
+                        <span class="tag">社区支持</span>
+                        <span class="tag">可定制</span>
+                    </div>
+
+                    <div class="model-links">
+                        <a href="https://ai.meta.com/llama/" target="_blank" class="model-link">
+                            <i class="fas fa-external-link-alt"></i> 官方网站
+                        </a>
+                        <a href="#" class="model-link">
+                            <i class="fas fa-book"></i> 技术文档
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 文心一言 模型卡片 -->
+                <div class="model-card detailed" data-category="llm" data-country="cn">
+                    <div class="model-header">
+                        <div class="model-logo wenxin">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="model-info">
+                            <h3 class="model-name">文心一言 4.0</h3>
+                            <div class="model-company">百度</div>
+                            <div class="model-country"><span class="country-flag cn" title="中国">🇨🇳</span> 中国</div>
+                        </div>
+                    </div>
+
+                    <div class="model-description">
+                        <p>文心一言是百度开发的AI大语言模型，在中文理解和生成方面表现优异。最新4.0版本增强了多模态能力和推理能力，深度集成百度搜索生态。</p>
+                    </div>
+
+                    <div class="model-specs">
+                        <div class="spec">
+                            <span class="spec-label">版本</span>
+                            <span class="spec-value">4.0</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">上下文长度</span>
+                            <span class="spec-value">128K tokens</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">训练数据</span>
+                            <span class="spec-value">中文为主</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">多模态支持</span>
+                            <span class="spec-value">是</span>
+                        </div>
+                    </div>
+
+                    <div class="model-features">
+                        <h4>主要特点</h4>
+                        <ul>
+                            <li>优秀的中文理解和生成能力</li>
+                            <li>深度集成百度搜索和知识图谱</li>
+                            <li>强大的多模态处理能力</li>
+                            <li>企业级安全性和可靠性</li>
+                            <li>丰富的API和插件生态</li>
+                        </ul>
+                    </div>
+
+                    <div class="model-tags">
+                        <span class="tag">中文优化</span>
+                        <span class="tag">多模态</span>
+                        <span class="tag">搜索集成</span>
+                        <span class="tag">企业级</span>
+                    </div>
+
+                    <div class="model-links">
+                        <a href="https://yiyan.baidu.com/" target="_blank" class="model-link">
+                            <i class="fas fa-external-link-alt"></i> 官方网站
+                        </a>
+                        <a href="#" class="model-link">
+                            <i class="fas fa-book"></i> 技术文档
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 通义千问 模型卡片 -->
+                <div class="model-card detailed" data-category="llm" data-country="cn">
+                    <div class="model-header">
+                        <div class="model-logo tongyi">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="model-info">
+                            <h3 class="model-name">通义千问 2.5</h3>
+                            <div class="model-company">阿里巴巴</div>
+                            <div class="model-country"><span class="country-flag cn" title="中国">🇨🇳</span> 中国</div>
+                        </div>
+                    </div>
+
+                    <div class="model-description">
+                        <p>通义千问是阿里巴巴开发的大语言模型，在代码生成和电商场景应用方面表现突出。2.5版本增强了数学推理和长文本处理能力。</p>
+                    </div>
+
+                    <div class="model-specs">
+                        <div class="spec">
+                            <span class="spec-label">版本</span>
+                            <span class="spec-value">2.5</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">上下文长度</span>
+                            <span class="spec-value">128K tokens</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">训练数据</span>
+                            <span class="spec-value">中英双语</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">代码能力</span>
+                            <span class="spec-value">优秀</span>
+                        </div>
+                    </div>
+
+                    <div class="model-features">
+                        <h4>主要特点</h4>
+                        <ul>
+                            <li>强大的代码生成和调试能力</li>
+                            <li>优秀的数学和逻辑推理</li>
+                            <li>深度集成阿里云生态</li>
+                            <li>电商场景优化</li>
+                            <li>多轮对话能力优秀</li>
+                        </ul>
+                    </div>
+
+                    <div class="model-tags">
+                        <span class="tag">代码生成</span>
+                        <span class="tag">数学推理</span>
+                        <span class="tag">电商优化</span>
+                        <span class="tag">云集成</span>
+                    </div>
+
+                    <div class="model-links">
+                        <a href="https://tongyi.aliyun.com/" target="_blank" class="model-link">
+                            <i class="fas fa-external-link-alt"></i> 官方网站
+                        </a>
+                        <a href="#" class="model-link">
+                            <i class="fas fa-book"></i> 技术文档
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 智谱GLM 模型卡片 -->
+                <div class="model-card detailed" data-category="llm" data-country="cn">
+                    <div class="model-header">
+                        <div class="model-logo glm">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="model-info">
+                            <h3 class="model-name">智谱GLM-4</h3>
+                            <div class="model-company">智谱AI</div>
+                            <div class="model-country"><span class="country-flag cn" title="中国">🇨🇳</span> 中国</div>
+                        </div>
+                    </div>
+
+                    <div class="model-description">
+                        <p>GLM-4是智谱AI开发的大语言模型系列，以优秀的中英双语能力和开源生态著称。提供从基础版到旗舰版的多个版本选择。</p>
+                    </div>
+
+                    <div class="model-specs">
+                        <div class="spec">
+                            <span class="spec-label">版本</span>
+                            <span class="spec-value">GLM-4/4V/4-AllTools</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">上下文长度</span>
+                            <span class="spec-value">128K tokens</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">开源版本</span>
+                            <span class="spec-value">GLM-3/4</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">多语言支持</span>
+                            <span class="spec-value">中英双语优秀</span>
+                        </div>
+                    </div>
+
+                    <div class="model-features">
+                        <h4>主要特点</h4>
+                        <ul>
+                            <li>优秀的中英双语能力</li>
+                            <li>完整的开源版本生态</li>
+                            <li>强大的工具调用能力</li>
+                            <li>学术研究友好</li>
+                            <li>企业定制化服务</li>
+                        </ul>
+                    </div>
+
+                    <div class="model-tags">
+                        <span class="tag">双语优秀</span>
+                        <span class="tag">开源生态</span>
+                        <span class="tag">学术研究</span>
+                        <span class="tag">工具调用</span>
+                    </div>
+
+                    <div class="model-links">
+                        <a href="https://www.zhipu.ai/" target="_blank" class="model-link">
+                            <i class="fas fa-external-link-alt"></i> 官方网站
+                        </a>
+                        <a href="#" class="model-link">
+                            <i class="fas fa-book"></i> 技术文档
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 模型选择指南 -->
+    <section class="model-guide">
+        <div class="container">
+            <h2 class="section-title">如何选择合适的AI模型？</h2>
+            <div class="guide-grid">
+                <div class="guide-card">
+                    <div class="guide-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>对话和客服</h3>
+                    <p>推荐使用Claude 3或GPT-4，它们具有优秀的对话能力和安全性，适合客户服务和日常对话场景。</p>
+                    <div class="guide-models">
+                        <span class="model-badge gpt">GPT-4</span>
+                        <span class="model-badge claude">Claude 3</span>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>编程开发</h3>
+                    <p>GitHub Copilot专门为代码生成优化，GPT-4和Claude 3也具有优秀的代码能力，适合编程任务。</p>
+                    <div class="guide-models">
+                        <span class="model-badge copilot">Copilot</span>
+                        <span class="model-badge gpt">GPT-4</span>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>文档分析</h3>
+                    <p>Claude 3具有200K上下文长度，特别适合长文档分析。GPT-4也支持长上下文处理。</p>
+                    <div class="guide-models">
+                        <span class="model-badge claude">Claude 3</span>
+                        <span class="model-badge gpt">GPT-4</span>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>图像处理</h3>
+                    <p>Gemini和GPT-4V是专门的多模态模型，DALL-E 3专注于图像生成，适合视觉相关任务。</p>
+                    <div class="guide-models">
+                        <span class="model-badge gemini">Gemini</span>
+                        <span class="model-badge dalle">DALL-E 3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-brain"></i>
+                        <span>AI前沿</span>
+                    </div>
+                    <p class="footer-description">
+                        专注于人工智能资讯、模型介绍和知识教程的学习平台，助力您掌握AI技术前沿。
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">首页</a></li>
+                        <li><a href="news.html">AI资讯</a></li>
+                        <li><a href="models.html">AI模型</a></li>
+                        <li><a href="tutorials.html">AI教程</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>资源</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">AI学习路线</a></li>
+                        <li><a href="#">模型对比</a></li>
+                        <li><a href="#">研究论文</a></li>
+                        <li><a href="#">工具推荐</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> contact@aifrontier.com</li>
+                        <li><i class="fas fa-phone"></i> +86 400-123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 北京市海淀区中关村</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI前沿. 保留所有权利.</p>
+                <div class="footer-legal">
+                    <a href="#">隐私政策</a>
+                    <a href="#">服务条款</a>
+                    <a href="#">免责声明</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/models.js"></script>
+</body>
+</html>

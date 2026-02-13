@@ -1,0 +1,26 @@
+# 操作系统文件
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# 编辑器和目录文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node模块（如果将来添加）
+node_modules/
+
+# 日志文件
+*.log
+npm-debug.log*
+
+# 临时文件
+*.tmp
+*.temp
+
+# 备份文件
+*.bak
+*.backup

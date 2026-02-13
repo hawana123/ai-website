@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI资讯 - AI前沿</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-brain"></i>
+                <span>AI前沿</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html"><i class="fas fa-home"></i> 首页</a></li>
+                <li><a href="news.html" class="active"><i class="fas fa-newspaper"></i> AI资讯</a></li>
+                <li><a href="models.html"><i class="fas fa-robot"></i> AI模型</a></li>
+                <li><a href="tutorials.html"><i class="fas fa-graduation-cap"></i> AI教程</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> 关于</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>AI最新资讯</h1>
+            <p class="page-subtitle">追踪人工智能领域的最新动态、研究成果和行业新闻</p>
+
+            <!-- 分类筛选 -->
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all">全部</button>
+                <button class="category-btn" data-category="research">研究进展</button>
+                <button class="category-btn" data-category="industry">行业动态</button>
+                <button class="category-btn" data-category="application">技术应用</button>
+                <button class="category-btn" data-category="policy">政策法规</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 资讯列表 -->
+    <section class="news-list">
+        <div class="container">
+            <div class="news-grid">
+                <!-- 资讯卡片 1 -->
+                <article class="news-card detailed" data-category="research">
+                    <div class="news-header">
+                        <div class="news-category">研究进展</div>
+                        <span class="news-date"><i class="far fa-calendar"></i> 2024-03-15</span>
+                    </div>
+                    <h2 class="news-title">多模态AI模型在医疗影像诊断中取得突破</h2>
+                    <p class="news-excerpt">斯坦福大学研究团队开发的新型多模态AI模型，能够同时分析医学影像和临床文本数据，在癌症早期诊断中的准确率达到98.7%，显著高于传统单一模态模型。</p>
+                    <div class="news-content">
+                        <p>该研究发表在《自然·医学》杂志上，研究人员结合了卷积神经网络和Transformer架构，创建了一个能够理解医学影像、病理报告和患者病史的综合性AI系统。</p>
+                        <p>模型在超过10万例临床数据上进行了训练和验证，涵盖了肺癌、乳腺癌、结直肠癌等多种常见癌症类型。研究显示，该模型不仅提高了诊断准确性，还能为医生提供可解释的诊断依据。</p>
+                    </div>
+                    <div class="news-footer">
+                        <div class="news-meta">
+                            <span><i class="far fa-clock"></i> 8分钟阅读</span>
+                            <span><i class="fas fa-eye"></i> 2.5k 浏览</span>
+                        </div>
+                        <a href="#" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 资讯卡片 2 -->
+                <article class="news-card detailed" data-category="industry">
+                    <div class="news-header">
+                        <div class="news-category">行业动态</div>
+                        <span class="news-date"><i class="far fa-calendar"></i> 2024-03-14</span>
+                    </div>
+                    <h2 class="news-title">OpenAI发布GPT-4.5预览版，推理能力大幅提升</h2>
+                    <p class="news-excerpt">OpenAI正式发布了GPT-4.5的开发者预览版，新版本在逻辑推理、数学计算和代码生成方面有显著改进，同时支持更长的上下文窗口。</p>
+                    <div class="news-content">
+                        <p>GPT-4.5采用了新的混合专家架构，参数量达到1.8万亿，相比GPT-4提升了40%。在数学推理基准测试中，新模型的准确率达到了92.3%，比GPT-4提高了15个百分点。</p>
+                        <p>OpenAI表示，新模型在代码生成任务中的表现尤为突出，能够生成更复杂、更准确的代码，同时支持128K的上下文长度，适合处理长篇文档和技术文档。</p>
+                    </div>
+                    <div class="news-footer">
+                        <div class="news-meta">
+                            <span><i class="far fa-clock"></i> 6分钟阅读</span>
+                            <span><i class="fas fa-eye"></i> 3.1k 浏览</span>
+                        </div>
+                        <a href="#" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 资讯卡片 3 -->
+                <article class="news-card detailed" data-category="application">
+                    <div class="news-header">
+                        <div class="news-category">技术应用</div>
+                        <span class="news-date"><i class="far fa-calendar"></i> 2024-03-13</span>
+                    </div>
+                    <h2 class="news-title">AI驱动的自动驾驶系统在复杂城市环境中通过测试</h2>
+                    <p class="news-excerpt">Waymo的最新自动驾驶系统在旧金山复杂城市环境中完成了1000小时的无干预测试，展示了AI在实时决策和环境感知方面的强大能力。</p>
+                    <div class="news-content">
+                        <p>该系统采用了多传感器融合技术，结合激光雷达、摄像头和毫米波雷达数据，能够实时识别和预测行人、车辆和交通信号的变化。</p>
+                        <p>在测试期间，系统成功处理了包括施工区域、紧急车辆通行、恶劣天气等多种复杂场景，决策准确率达到99.8%，为完全自动驾驶的商业化应用奠定了基础。</p>
+                    </div>
+                    <div class="news-footer">
+                        <div class="news-meta">
+                            <span><i class="far fa-clock"></i> 7分钟阅读</span>
+                            <span><i class="fas fa-eye"></i> 1.8k 浏览</span>
+                        </div>
+                        <a href="#" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 资讯卡片 4 -->
+                <article class="news-card detailed" data-category="policy">
+                    <div class="news-header">
+                        <div class="news-category">政策法规</div>
+                        <span class="news-date"><i class="far fa-calendar"></i> 2024-03-12</span>
+                    </div>
+                    <h2 class="news-title">欧盟通过《人工智能法案》，建立全球首个AI监管框架</h2>
+                    <p class="news-excerpt">欧洲议会正式通过了《人工智能法案》，这是全球首个全面的人工智能监管框架，将对高风险AI系统实施严格监管。</p>
+                    <div class="news-content">
+                        <p>法案将AI系统分为四个风险等级：不可接受风险、高风险、有限风险和最小风险。对于高风险AI系统，如医疗诊断、关键基础设施等，将实施严格的透明度、安全性和人工监督要求。</p>
+                        <p>法案还禁止了某些被认为不可接受的AI应用，包括社会评分系统、实时远程生物识别系统（执法除外）以及利用弱点操纵行为的AI系统。</p>
+                    </div>
+                    <div class="news-footer">
+                        <div class="news-meta">
+                            <span><i class="far fa-clock"></i> 5分钟阅读</span>
+                            <span><i class="fas fa-eye"></i> 2.2k 浏览</span>
+                        </div>
+                        <a href="#" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 资讯卡片 5 -->
+                <article class="news-card detailed" data-category="research">
+                    <div class="news-header">
+                        <div class="news-category">研究进展</div>
+                        <span class="news-date"><i class="far fa-calendar"></i> 2024-03-11</span>
+                    </div>
+                    <h2 class="news-title">新型神经形态芯片能效比传统AI芯片提升100倍</h2>
+                    <p class="news-excerpt">麻省理工学院的研究团队开发出一种新型神经形态芯片，模拟人脑的神经元和突触结构，在图像识别任务中的能效比传统GPU提升了100倍。</p>
+                    <div class="news-content">
+                        <p>这种芯片采用了忆阻器技术，能够在同一物理结构中同时进行存储和计算，避免了传统冯·诺依曼架构中的内存墙问题。</p>
+                        <p>在ImageNet图像识别基准测试中，该芯片在保持相同准确率的情况下，功耗仅为传统AI芯片的1%，为边缘计算和物联网设备中的AI应用开辟了新的可能性。</p>
+                    </div>
+                    <div class="news-footer">
+                        <div class="news-meta">
+                            <span><i class="far fa-clock"></i> 6分钟阅读</span>
+                            <span><i class="fas fa-eye"></i> 1.5k 浏览</span>
+                        </div>
+                        <a href="#" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- 资讯卡片 6 -->
+                <article class="news-card detailed" data-category="industry">
+                    <div class="news-header">
+                        <div class="news-category">行业动态</div>
+                        <span class="news-date"><i class="far fa-calendar"></i> 2024-03-10</span>
+                    </div>
+                    <h2 class="news-title">微软推出Copilot Pro，AI助手全面集成Office套件</h2>
+                    <p class="news-excerpt">微软正式推出Copilot Pro订阅服务，将AI助手深度集成到Word、Excel、PowerPoint等Office应用中，大幅提升办公效率。</p>
+                    <div class="news-content">
+                        <p>Copilot Pro能够根据自然语言指令自动生成文档内容、分析Excel数据、创建演示文稿，还能在Outlook中帮助撰写邮件和安排会议。</p>
+                        <p>微软表示，Copilot Pro基于GPT-4技术，但针对办公场景进行了专门优化，能够理解复杂的办公文档结构和业务逻辑，提供更准确、更相关的建议。</p>
+                    </div>
+                    <div class="news-footer">
+                        <div class="news-meta">
+                            <span><i class="far fa-clock"></i> 4分钟阅读</span>
+                            <span><i class="fas fa-eye"></i> 2.8k 浏览</span>
+                        </div>
+                        <a href="#" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 分页 -->
+            <div class="pagination">
+                <a href="#" class="page-btn disabled"><i class="fas fa-chevron-left"></i> 上一页</a>
+                <div class="page-numbers">
+                    <a href="#" class="page-number active">1</a>
+                    <a href="#" class="page-number">2</a>
+                    <a href="#" class="page-number">3</a>
+                    <span class="page-dots">...</span>
+                    <a href="#" class="page-number">8</a>
+                </div>
+                <a href="#" class="page-btn">下一页 <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>订阅AI资讯简报</h2>
+                <p>每周获取最新的人工智能资讯、研究进展和行业分析，直接发送到您的邮箱</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="请输入您的邮箱地址" required>
+                    <button type="submit" class="btn btn-primary">订阅</button>
+                </form>
+                <p class="newsletter-note">我们尊重您的隐私，您可以随时取消订阅</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-brain"></i>
+                        <span>AI前沿</span>
+                    </div>
+                    <p class="footer-description">
+                        专注于人工智能资讯、模型介绍和知识教程的学习平台，助力您掌握AI技术前沿。
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">首页</a></li>
+                        <li><a href="news.html">AI资讯</a></li>
+                        <li><a href="models.html">AI模型</a></li>
+                        <li><a href="tutorials.html">AI教程</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>资源</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">AI学习路线</a></li>
+                        <li><a href="#">模型对比</a></li>
+                        <li><a href="#">研究论文</a></li>
+                        <li><a href="#">工具推荐</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> contact@aifrontier.com</li>
+                        <li><i class="fas fa-phone"></i> +86 400-123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 北京市海淀区中关村</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI前沿. 保留所有权利.</p>
+                <div class="footer-legal">
+                    <a href="#">隐私政策</a>
+                    <a href="#">服务条款</a>
+                    <a href="#">免责声明</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/news.js"></script>
+</body>
+</html>
