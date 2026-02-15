@@ -1,0 +1,30 @@
+# robots.txt - AI前沿网站
+# 允许所有搜索引擎爬取所有页面
+
+User-agent: *
+Disallow:
+
+# 允许访问所有页面
+Allow: /
+
+# 站点地图位置
+Sitemap: https://hawana123.github.io/ai-website/sitemap.xml
+
+# 特定搜索引擎规则
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 10
+
+User-agent: bingbot
+Allow: /
+Crawl-delay: 10
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 10
+
+# 禁止爬取的文件类型（如果有）
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
