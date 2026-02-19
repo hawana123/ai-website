@@ -6,7 +6,7 @@
 
   <!-- 首页 -->
   <url>
-    <loc>https://hawana123.github.io/ai-website/</loc>
+    <loc>https://aai.zoz.la/</loc>
     <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- AI资讯页面 -->
   <url>
-    <loc>https://hawana123.github.io/ai-website/pages/news.html</loc>
+    <loc>https://aai.zoz.la/pages/news.html</loc>
     <lastmod>2024-03-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -22,7 +22,7 @@
 
   <!-- AI模型页面 -->
   <url>
-    <loc>https://hawana123.github.io/ai-website/pages/models.html</loc>
+    <loc>https://aai.zoz.la/pages/models.html</loc>
     <lastmod>2024-03-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -30,7 +30,7 @@
 
   <!-- AI教程页面 -->
   <url>
-    <loc>https://hawana123.github.io/ai-website/pages/tutorials.html</loc>
+    <loc>https://aai.zoz.la/pages/tutorials.html</loc>
     <lastmod>2024-03-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

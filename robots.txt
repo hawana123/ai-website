@@ -8,7 +8,7 @@ Disallow:
 Allow: /
 
 # 站点地图位置
-Sitemap: https://hawana123.github.io/ai-website/sitemap.xml
+Sitemap: https://aai.zoz.la/sitemap.xml
 
 # 特定搜索引擎规则
 User-agent: Googlebot
