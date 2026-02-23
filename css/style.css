@@ -255,18 +255,15 @@ body {
 /* Hero区域广告样式 */
 .hero-ads {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    top: 20px;
+    right: 20px;
     z-index: 10;
 }
 
 .hero-ad {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: var(--radius-lg);
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -281,7 +278,6 @@ body {
 }
 
 .hero-ad:hover {
-    transform: scale(1.1);
     background: rgba(255, 255, 255, 0.25);
     box-shadow: var(--shadow-lg);
 }
@@ -305,33 +301,17 @@ body {
     justify-content: center !important;
 }
 
-/* 广告内容占位符 */
-.hero-ad .ad-placeholder {
-    color: white;
-    font-size: 0.65rem;
-    text-align: center;
-    font-weight: 600;
-    z-index: 1;
-    position: relative;
-    pointer-events: none;
-    line-height: 1.1;
-}
 
 /* 响应式设计 */
 @media (max-width: 768px) {
     .hero-ads {
-        top: 8px;
-        right: 8px;
-        gap: 6px;
+        top: 10px;
+        right: 10px;
     }
 
     .hero-ad {
-        width: 40px;
-        height: 40px;
-    }
-
-    .hero-ad .ad-placeholder {
-        font-size: 0.5rem;
+        width: 150px;
+        height: 150px;
     }
 }
 
@@ -1865,16 +1845,4 @@ body {
 
 .hero-ad {
     animation: adFadeIn 0.6s ease-out;
-}
-
-.hero-ad:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.hero-ad:nth-child(2) {
-    animation-delay: 0.3s;
-}
-
-.hero-ad:nth-child(3) {
-    animation-delay: 0.5s;
 }
