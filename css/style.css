@@ -252,6 +252,89 @@ body {
     }
 }
 
+/* Hero区域广告样式 */
+.hero-ads {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 10;
+}
+
+.hero-ad {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.hero-ad:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: var(--shadow-lg);
+}
+
+.hero-ad::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+    border-radius: 50%;
+}
+
+.hero-ad ins {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 广告内容占位符 */
+.hero-ad .ad-placeholder {
+    color: white;
+    font-size: 0.65rem;
+    text-align: center;
+    font-weight: 600;
+    z-index: 1;
+    position: relative;
+    pointer-events: none;
+    line-height: 1.1;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero-ads {
+        top: 10px;
+        right: 10px;
+        gap: 8px;
+    }
+
+    .hero-ad {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hero-ad .ad-placeholder {
+        font-size: 0.55rem;
+    }
+}
+
 /* 功能区域样式 */
 .features {
     padding: 5rem 0;
@@ -1767,107 +1850,6 @@ body {
     }
 }
 
-/* Google广告侧边栏样式 */
-.ad-sidebar {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    width: 120px;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--gray-light);
-}
-
-.ad-title {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--dark-color);
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.ad-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.ad-circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-md);
-}
-
-.ad-circle:hover {
-    transform: scale(1.1);
-    box-shadow: var(--shadow-lg);
-}
-
-.ad-circle::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
-    border-radius: 50%;
-}
-
-.ad-circle ins {
-    width: 100% !important;
-    height: 100% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-/* 广告内容占位符 */
-.ad-placeholder {
-    color: white;
-    font-size: 0.75rem;
-    text-align: center;
-    font-weight: 600;
-    z-index: 1;
-    position: relative;
-    pointer-events: none;
-}
-
-/* 响应式设计 */
-@media (max-width: 1024px) {
-    .ad-sidebar {
-        right: 10px;
-        width: 100px;
-    }
-
-    .ad-circle {
-        width: 70px;
-        height: 70px;
-    }
-}
-
-@media (max-width: 768px) {
-    .ad-sidebar {
-        display: none; /* 在移动端隐藏广告侧边栏 */
-    }
-}
 
 /* 广告加载动画 */
 @keyframes adFadeIn {
@@ -1881,18 +1863,18 @@ body {
     }
 }
 
-.ad-circle {
+.hero-ad {
     animation: adFadeIn 0.6s ease-out;
 }
 
-.ad-circle:nth-child(1) {
+.hero-ad:nth-child(1) {
     animation-delay: 0.1s;
 }
 
-.ad-circle:nth-child(2) {
+.hero-ad:nth-child(2) {
     animation-delay: 0.3s;
 }
 
-.ad-circle:nth-child(3) {
+.hero-ad:nth-child(3) {
     animation-delay: 0.5s;
 }
