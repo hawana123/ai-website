@@ -70,7 +70,7 @@
 
   <script>
     // ====== 配置：后端 API 地址（改为你的实际后端域名） ======
-    const API_BASE = 'https://your-api-domain.com';
+    const API_BASE = 'https://url.xp58.xyz';
 
     (async function () {
       const app = document.getElementById('app');
@@ -86,7 +86,7 @@
       // 2. 调用后端 resolve 接口
       try {
         
-        /*
+        
         const resp = await fetch(`${API_BASE}/api/resolve/${encodeURIComponent(shortCode)}`);
 
         if (!resp.ok) {
@@ -99,8 +99,8 @@
         }
 
         const data = await resp.json();
-        */
-        const targetUrl = "https://baidu.com?wd="+shortCode;//data.original_url;
+        
+        const targetUrl = data.original_url;
 
         if (!targetUrl) {
           showError('解析结果异常');
